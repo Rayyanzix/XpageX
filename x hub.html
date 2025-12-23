@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>All Mr. M creation</title>
+    <style>
+        body { background: #0a0a0a; color: #eee; font-family: 'Consolas', monospace; padding: 40px; }
+        .container { max-width: 800px; margin: auto; }
+        .script-box { 
+            background: #151515; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+        }
+        .header { 
+            background: #222; 
+            padding: 15px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            border-bottom: 2px solid #00ff88;
+        }
+        .header span { color: #00ff88; font-weight: bold; font-size: 1.2em; }
+        pre { margin: 0; padding: 25px; overflow-x: auto; color: #88ff88; font-size: 15px; line-height: 1.5; }
+        .copy-btn {
+            background: #00ff88; border: none; padding: 8px 20px; 
+            border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold;
+            transition: 0.2s;
+        }
+        .copy-btn:hover { background: #00cc6e; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align:center; color:#00ff88; margin-bottom: 30px;">All Mr. M creation</h1>
+
+    <div class="script-box">
+        <div class="header">
+            <span>X ban Player</span>
+            <button class="copy-btn" onclick="copyCode(this)">COPY SCRIPT</button>
+        </div>
+        <pre><code>loadstring(game:HttpGet("https://pastebin.com/raw/3Sw2PRBP", true))()</code></pre>
+    </div>
+</div>
+
+<script>
+    function copyCode(btn) {
+        const code = btn.parentElement.nextElementSibling.innerText;
+        navigator.clipboard.writeText(code);
+        btn.innerText = "COPIED!";
+        setTimeout(() => { btn.innerText = "COPY SCRIPT"; }, 2000);
+    }
+</script>
+
+</body>
+</html>
